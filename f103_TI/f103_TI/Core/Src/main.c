@@ -19,8 +19,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "tim.h"
+#include "usart.h"
 #include "gpio.h"
-#include "pwm_init.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -66,9 +67,10 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  uint16_t pwmVal=3500;   //PWM占空比  
+  uint16_t pwmVal=3500;   //PWM占空�?  
     
   /* USER CODE END 1 */
+
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
@@ -91,6 +93,7 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM3_Init();
   MX_TIM4_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 	PWM_Init();
 	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_14,GPIO_PIN_SET);

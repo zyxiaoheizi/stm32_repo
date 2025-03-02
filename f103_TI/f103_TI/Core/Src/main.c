@@ -66,10 +66,9 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
-
+  uint16_t pwmVal=350;   //PWM占空比  
+    
   /* USER CODE END 1 */
-
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
@@ -93,7 +92,10 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -103,6 +105,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  __HAL_TIM_SetCompare(&htim2,TIM_CHANNEL_1,pwmVal);
   }
   /* USER CODE END 3 */
 }

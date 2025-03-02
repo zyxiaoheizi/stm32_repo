@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"f103_ti\startup_stm32f103xb.o"
+"f103_ti\main.o"
+"f103_ti\gpio.o"
+"f103_ti\tim.o"
+"f103_ti\stm32f1xx_it.o"
+"f103_ti\stm32f1xx_hal_msp.o"
+"f103_ti\stm32f1xx_hal_gpio_ex.o"
+"f103_ti\stm32f1xx_hal_tim.o"
+"f103_ti\stm32f1xx_hal_tim_ex.o"
+"f103_ti\stm32f1xx_hal.o"
+"f103_ti\stm32f1xx_hal_rcc.o"
+"f103_ti\stm32f1xx_hal_rcc_ex.o"
+"f103_ti\stm32f1xx_hal_gpio.o"
+"f103_ti\stm32f1xx_hal_dma.o"
+"f103_ti\stm32f1xx_hal_cortex.o"
+"f103_ti\stm32f1xx_hal_pwr.o"
+"f103_ti\stm32f1xx_hal_flash.o"
+"f103_ti\stm32f1xx_hal_flash_ex.o"
+"f103_ti\stm32f1xx_hal_exti.o"
+"f103_ti\system_stm32f1xx.o"
+--strict --scatter "f103_TI\f103_TI.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "f103_TI.map" -o f103_TI\f103_TI.axf

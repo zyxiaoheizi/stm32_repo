@@ -29,3 +29,4 @@ f103_ti\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 f103_ti\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 f103_ti\main.o: ../Core/Inc/tim.h
 f103_ti\main.o: ../Core/Inc/gpio.h
+f103_ti\main.o: ..\User\pwm_init.h

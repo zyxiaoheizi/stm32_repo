@@ -20,7 +20,7 @@
 #include "main.h"
 #include "tim.h"
 #include "gpio.h"
-
+#include "pwm_init.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -66,7 +66,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  uint16_t pwmVal=350;   //PWM占空比  
+  uint16_t pwmVal=3500;   //PWM占空比  
     
   /* USER CODE END 1 */
   /* MCU Configuration--------------------------------------------------------*/
@@ -92,10 +92,9 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
+	PWM_Init();
+	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_14,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_15,GPIO_PIN_RESET);
   /* USER CODE END 2 */
 
   /* Infinite loop */

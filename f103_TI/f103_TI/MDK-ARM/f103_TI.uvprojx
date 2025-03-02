@@ -499,6 +499,18 @@
         </Group>
         <Group>
           <GroupName>User</GroupName>
+          <Files>
+            <File>
+              <FileName>pwm_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\pwm_init.c</FilePath>
+            </File>
+            <File>
+              <FileName>pwm_init.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\User\pwm_init.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
